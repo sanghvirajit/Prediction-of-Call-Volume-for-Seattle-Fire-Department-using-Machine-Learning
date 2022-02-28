@@ -146,13 +146,11 @@ Changes in Pipfile and Dockerfile can be made as per the requirement.
 
 ```scala
 git clone https://github.com/sanghvirajit/niologic-GmbH.git
-conda activate py38
-python3 -m pipenv --python 3.8 shell 
-python3 train.py
 docker build -t call_volume .
 docker run -it --rm -p 9696:9696 call_volume
 python3 predict-test-docker.py
 ``` 
+**Building an docker image will also run the train.py file.**
 
 ## Output
 
