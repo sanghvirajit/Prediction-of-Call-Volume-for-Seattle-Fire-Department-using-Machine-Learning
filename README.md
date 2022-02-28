@@ -13,6 +13,40 @@ A comparison study has been performed to understand which ML algorithm suits bes
 
 Seattle-Real-Time-Fire-911-Calls real time dataset is used which can be available at https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj.
 
+## Directory Structure
+
+```scala
+│   Dockerfile
+│   model.bin
+│   Pipfile
+│   Pipfile.lock
+│   predict.py
+│   predict_docker.py
+│   predict_local.py
+│   README.md
+│   Requirements.txt
+│   train.py
+│
+├───Data
+│       hourly_data.csv
+│       monthly_data.csv
+│       processed_data.csv
+│       Seattle_Real_Time_Fire_911_Calls.7z
+│
+├───Images
+│       call_volume_month.png
+│       call_volume_week.png
+│       filename.png
+│
+└───Notebooks
+    │   01_Date_processing_and _EDA.ipynb
+    │   02_BaselineModels.ipynb
+    │   03_ML_Modeling.ipynb
+    │   04_Prophet_model.ipynb
+    │   05_Model_Loading_and_Predicting.ipynb
+    │   model_lightgbm.bin
+```
+
 ### Approach to the problem
 
 This problem is a Time series forecasting problem and was approached in 3 ways.
