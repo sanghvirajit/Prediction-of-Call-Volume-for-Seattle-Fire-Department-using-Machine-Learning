@@ -141,7 +141,7 @@ Changes in Pipfile and Dockerfile can be made as per the requirement.
 git clone https://github.com/sanghvirajit/niologic-GmbH.git
 docker build -t call_volume .
 docker run -it --rm -p 9696:9696 call_volume
-python3 predict-test-docker.py
+python3 predict_docker.py
 ``` 
 **Building an docker image will also run the train.py file.**
 
