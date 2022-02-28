@@ -93,6 +93,11 @@ flask: 2.0.3
 lightgbm: 3.3.2
 requests: 2.26.0
 ``` 
+### EDA and feature importance
+
+![hourly](https://user-images.githubusercontent.com/69073063/156017435-6604992a-9c00-4bfc-be5f-9712d2a924f5.png)
+
+![filename](https://user-images.githubusercontent.com/69073063/156017460-5dc1706e-6c7b-4159-a4eb-1a094a34d7f9.png)
 
 ### Model Summary 
 
@@ -143,7 +148,7 @@ docker build -t call_volume .
 docker run -it --rm -p 9696:9696 call_volume
 python3 predict_docker.py
 ``` 
-**Building an docker image will also run the train.py file.**
+**Building a docker image will also run the train.py file.**
 
 ## Output
 
