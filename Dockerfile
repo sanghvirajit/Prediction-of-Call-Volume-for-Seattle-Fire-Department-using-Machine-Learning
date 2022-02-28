@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get -y install curl
 RUN apt-get install libgomp1
 
-COPY ["predict.py", "model.bin", "./"]
+COPY ["train.py", "predict.py", "model.bin", "./"]
 
 EXPOSE 9696
 
