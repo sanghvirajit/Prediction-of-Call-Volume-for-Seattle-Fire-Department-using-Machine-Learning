@@ -7,8 +7,10 @@ name = "pypi"
 numpy = "*"
 pandas = "*"
 flask = "*"
-waitress = "*"
 lightgbm = "*"
+
+waitress = "*"
+#gunicorn = "*"
 
 [dev-packages]
 awsebcli = "==3.20.2"
