@@ -104,14 +104,14 @@ Model can predict the call volume for each day of the year and each hour of the 
 
 Model takes two types of inputs, date to get the total call volume on that particular date and date/time to get the call volume for any particular hour of the day.
 
-In order to get the total call volume on a date, modify the input as follow,
+In order to get the total call volume in a day, modify the input as date,
 
 ```scala
 input_ = {
     'date': '2022-01-01'
 }
 ```
-In order to get the hourly call volume in a day, modify the input as follow,
+In order to get the hourly call volume in a day, modify the input as datetime,
 
 ```scala
 input_ = {
