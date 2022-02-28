@@ -94,6 +94,16 @@ flask: 2.0.3
 lightgbm: 3.3.2
 requests: 2.26.0
 ``` 
+### EDA and Feature Importance
+
+![hourly](https://user-images.githubusercontent.com/69073063/155984071-eddc07dd-0c8b-4a63-b15e-1d59e39bbc07.png)
+
+![filename](https://user-images.githubusercontent.com/69073063/155984123-7bd25fc5-0d91-44f0-b5ea-d011d16a30b3.png)
+
+
+### Model Summary 
+
+![model_summary](https://user-images.githubusercontent.com/69073063/155983832-618d6c56-6c23-4fcb-b000-6be03ec6191f.png)
 
 ### Input to the model
 
