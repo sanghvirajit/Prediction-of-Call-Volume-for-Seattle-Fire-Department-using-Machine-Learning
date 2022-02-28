@@ -2,43 +2,44 @@ import pandas as pd
 import pickle
 import lightgbm as lgb
 
-data = pd.read_csv("Data/processed_data.csv")
+def train():
 
-output_file = 'model.bin'
+    data = pd.read_csv("Data/processed_data.csv")
 
-# Splitting the data
+    output_file = 'model.bin'
 
-X_train = data[data['year'] < 2022]
-y_train = X_train['call_counter']
+    # Splitting the data
 
-del X_train['call_counter']
-X_train = X_train.set_index('date')
+    X_train = data[data['year'] < 2022]
+    y_train = X_train['call_counter']
 
-# LightGBM model
+    del X_train['call_counter']
+    X_train = X_train.set_index('date')
 
-model = lgb.LGBMRegressor(
-                       num_leaves = 30,
-                       max_depth = 6,
-                       learning_rate = 0.1
+    # LightGBM model
+
+    model = lgb.LGBMRegressor(
+        num_leaves=30,
+        max_depth=6,
+        learning_rate=0.1
     )
 
-# Training the model
+    # Training the model
 
-print("Training the model...")
-
-def train(model, X_train, y_train):
-    
+    print("Training the model...")
     model = model.fit(X_train, y_train)
-    
-    return model
 
-model = train(model, X_train, y_train)
+    # Saving the model
 
-# Saving the model
+    print("Saving the model...")
 
-print("Saving the model...")
+    with open(output_file, 'wb') as f_out:
+        pickle.dump((model), f_out)
 
-with open(output_file, 'wb') as f_out:
-    pickle.dump((model), f_out)
+    print("Model saved successfully!")
 
-print("Model saved successfully!")
+if __name__ == '__main__':
+    train()
+
+
+
