@@ -96,6 +96,7 @@ If linux is used to test the model, I would suggest to use gunicorn to serve the
 ```scala
 gunicorn --bind=0.0.0.0:9696 predict:app
 ``` 
+Changes in Pipfile and Dockerfile can be made as per the requirement.
 
 ## Commands to run the project locally
 
