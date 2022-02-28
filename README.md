@@ -22,7 +22,6 @@ Seattle-Real-Time-Fire-911-Calls real time dataset is used which can be availabl
 │   Pipfile.lock
 │   predict.py
 │   predict_docker.py
-│   predict_local.py
 │   README.md
 │   Requirements.txt
 │   train.py
@@ -94,12 +93,6 @@ flask: 2.0.3
 lightgbm: 3.3.2
 requests: 2.26.0
 ``` 
-### EDA and Feature Importance
-
-![hourly](https://user-images.githubusercontent.com/69073063/155984071-eddc07dd-0c8b-4a63-b15e-1d59e39bbc07.png)
-
-![filename](https://user-images.githubusercontent.com/69073063/155984123-7bd25fc5-0d91-44f0-b5ea-d011d16a30b3.png)
-
 
 ### Model Summary 
 
@@ -111,14 +104,14 @@ Model can predict the call volume for each day of the year and each hour of the 
 
 Model takes two types of inputs, date to get the total call volume on that particular date and date/time to get the call volume for any particular hour of the day.
 
-In order to get the total call volume on a date, modify the input as follow,
+In order to get the total call volume in a day, modify the input as date,
 
 ```scala
 input_ = {
     'date': '2022-01-01'
 }
 ```
-In order to get the hourly call volume in a day, modify the input as follow,
+In order to get the hourly call volume in a day, modify the input as datetime,
 
 ```scala
 input_ = {
@@ -148,7 +141,7 @@ Changes in Pipfile and Dockerfile can be made as per the requirement.
 git clone https://github.com/sanghvirajit/niologic-GmbH.git
 docker build -t call_volume .
 docker run -it --rm -p 9696:9696 call_volume
-python3 predict-test-docker.py
+python3 predict_docker.py
 ``` 
 **Building an docker image will also run the train.py file.**
 
