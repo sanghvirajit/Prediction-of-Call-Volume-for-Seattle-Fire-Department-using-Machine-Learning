@@ -32,7 +32,6 @@ def train(model, X_train, y_train):
     
     return model
 
-
 model = train(model, X_train, y_train)
 
 # Saving the model

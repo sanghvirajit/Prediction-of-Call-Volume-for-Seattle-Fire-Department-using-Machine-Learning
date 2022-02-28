@@ -4,6 +4,7 @@ RUN pip install pipenv
 
 WORKDIR /app
 
+COPY Data/processed_data.csv ./Data/processed_data.csv
 COPY ["Pipfile", "Pipfile.lock", "./" ]
 
 RUN pipenv install --system --deploy
@@ -12,6 +13,8 @@ RUN apt-get -y install curl
 RUN apt-get install libgomp1
 
 COPY ["train.py", "predict.py", "model.bin", "./"]
+
+RUN python3 train.py
 
 EXPOSE 9696
 
