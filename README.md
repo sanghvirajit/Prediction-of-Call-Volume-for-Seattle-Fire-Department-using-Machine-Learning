@@ -75,11 +75,11 @@ This problem is a Time series forecasting problem and was approached in 3 ways.
 
 **Step 3** - Exploratory Data Analysis - EDA: Finding insights from the Data
 
-**Part 4** - Model Building: **Decision Tree, Gradient Boosting and Facebook's Prophet** - hyperparameter tuning, to find the best parameters.
+**Step 4** - Model Building: **Decision Tree, Gradient Boosting and Facebook's Prophet** - hyperparameter tuning, to find the best parameters.
 
-**Part 5** - Selecting the best model.
+**Step 5** - Selecting the best model.
 
-**Part 6** - Deployment of the model locally using Docker container and Flask application.
+**Step 6** - Deployment of the model locally using Docker container and Flask application.
 
 ## Requirements
 
